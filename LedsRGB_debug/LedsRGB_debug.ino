@@ -43,8 +43,7 @@ const int pinoSaidaB = 11;
 
 void setup() {
   //inicializa a saida serial para debug
-  //Serial.begin(9600); 
-  
+  Serial.begin(9600); 
   //inicializa os pinos de saida
   pinMode(pinoSaidaR, OUTPUT);
   pinMode(pinoSaidaG, OUTPUT);
@@ -71,10 +70,9 @@ void loop() {
   delay(2);
   int b = lePotAcendeLed(pinoEntradaB, pinoSaidaB);
   delay(2);
-  //debug(r,g,b);
+  debug(r,g,b);
 }
 
-/*
 void debug(int r, int g, int b) {
   Serial.print("R = ");
   Serial.print(r);
@@ -84,4 +82,3 @@ void debug(int r, int g, int b) {
   Serial.println(b);
   delay(500);
 }
-*/
